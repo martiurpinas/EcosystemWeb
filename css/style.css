@@ -1,24 +1,156 @@
 /* Shared styles for Ecosystem site */
-:root{
-  --bg:#f5f7fb;
-  --card:#ffffff;
-  --accent:#2b8aef;
-  --muted:#6b7280;
-  --max-width:1100px;
+/*
+  Ecosystem site CSS — anotado y reordenado
+
+  Objetivo: agrupar reglas y añadir referencias a los HTML
+  Páginas principales (usando este CSS):
+    - index.html
+    - es/index.html, es/proyectos.html, es/sobre.html
+    - ca/index.html, ca/projectes.html, ca/sobre.html
+    - en/index.html, en/proyectos.html, en/sobre.html
+
+  Secciones dentro de este archivo:
+    1) Variables globales
+    2) Reset y tipografía
+    3) Layout (.container, header, nav, footer)
+    4) Componentes (.brand, .logo, .lang-switch, .card, .grid, .project)
+    5) Helpers y responsive
+*/
+
+/* [1] Variables globales (usadas en todas las páginas) */
+:root {
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --accent: #2b8aef;
+  --muted: #6b7280;
+  --max-width: 1100px;
 }
-*{box-sizing:border-box}
-body{font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);margin:0;color:#111}
-.container{max-width:var(--max-width);margin:2rem auto;padding:1rem}
-header{background:var(--card);padding:1rem;border-radius:8px;box-shadow:0 1px 3px rgba(16,24,40,0.06);display:flex;align-items:center;justify-content:space-between}
-.brand{display:flex;align-items:center;gap:12px}
-.logo{width:48px;height:48px;background:linear-gradient(135deg,var(--accent),#7ad0ff);border-radius:8px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:12px}
-nav a{color:var(--accent);text-decoration:none;font-weight:600}
-.lang-switch{display:flex;gap:8px;align-items:center}
-.card{background:var(--card);padding:1.25rem;border-radius:8px;margin-top:1rem;box-shadow:0 1px 2px rgba(16,24,40,0.04)}
-h1{margin:0 0 0.5rem 0}
-p.lead{color:var(--muted);margin:0}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:1rem}
-.project{padding:1rem;border-radius:8px;background:linear-gradient(180deg,#fff,#fbfcff);border:1px solid #eef2ff}
-footer{margin-top:1.5rem;color:var(--muted);font-size:0.9rem;text-align:center}
-@media (max-width:600px){header{flex-direction:column;align-items:flex-start;gap:8px}}
+
+/* [2] Reset y tipografía (todas las páginas) */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  margin: 0;
+  color: #111;
+}
+
+/* [3] Layout */
+.container {
+  max-width: var(--max-width);
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+header {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav {
+  /* nav container used in es/, ca/, en/ */
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 12px;
+}
+
+nav a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer {
+  margin-top: 1.5rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* [4] Componentes */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--accent), #7ad0ff);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+}
+
+.lang-switch {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.card {
+  background: var(--card);
+  padding: 1.25rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+}
+
+h1 {
+  margin: 0 0 0.5rem 0;
+}
+
+p.lead {
+  color: var(--muted);
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin-top: 1rem;
+}
+
+.project {
+  padding: 1rem;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #fff, #fbfcff);
+  border: 1px solid #eef2ff;
+}
+
+/* [5] Helpers */
+.button {
+  background: var(--accent);
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* [6] Responsive */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
