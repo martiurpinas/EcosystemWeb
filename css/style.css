@@ -44,7 +44,11 @@ body {
   margin: 2rem auto;
   padding: 1rem;
 }
-
+.eco-container {
+  max-width: var(--max-width);
+  margin: 2rem auto;
+  padding: 1rem;
+}
 header {
   background: var(--card);
   padding: 1rem;
@@ -54,7 +58,15 @@ header {
   align-items: center;
   justify-content: space-between;
 }
-
+.eco-header {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 nav {
   /* nav container used in es/, ca/, en/ */
 }
@@ -72,21 +84,46 @@ nav a {
   text-decoration: none;
   font-weight: 600;
 }
+.eco-nav {
+  /* nav container used in es/, ca/, en/ */
+}
 
+.eco-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 12px;
+}
+
+.eco-nav a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
 footer {
   margin-top: 1.5rem;
   color: var(--muted);
   font-size: 0.9rem;
   text-align: center;
 }
-
+.eco-footer {
+  margin-top: 1.5rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
 /* [4] Componentes */
 .brand {
   display: flex;
   align-items: center;
   gap: 12px;
 }
-
+.eco-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 /* Sección y configuración del logo */
 .logo {
   width: 48px;
@@ -99,13 +136,27 @@ footer {
   color: white;
   font-weight: 700;
 }
-
+.eco-logo {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--accent), #7ad0ff);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+}
 .lang-switch {
   display: flex;
   gap: 8px;
   align-items: center;
 }
-
+.eco-lang {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
 .card {
   background: var(--card);
   padding: 1.25rem;
@@ -113,30 +164,51 @@ footer {
   margin-top: 1rem;
   box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
 }
-
+.eco-card {
+  background: var(--card);
+  padding: 1.25rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+}
 h1 {
   margin: 0 0 0.5rem 0;
 }
-
+h1 {
+  margin: 0 0 0.5rem 0;
+}
 p.lead {
   color: var(--muted);
   margin: 0;
 }
-
+p.eco-lead {
+  color: var(--muted);
+  margin: 0;
+}
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 12px;
   margin-top: 1rem;
 }
-
+.eco-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin-top: 1rem;
+}
 .project {
   padding: 1rem;
   border-radius: 8px;
   background: linear-gradient(180deg, #fff, #fbfcff);
   border: 1px solid #eef2ff;
 }
-
+.eco-project {
+  padding: 1rem;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #fff, #fbfcff);
+  border: 1px solid #eef2ff;
+}
 /* [5] Helpers */
 .button {
   background: var(--accent);
@@ -146,10 +218,24 @@ p.lead {
   text-decoration: none;
   font-weight: 600;
 }
-
+.eco-btn {
+  background: var(--accent);
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
 /* Diseño responsive para para ajustar a diferentes tamaños de pantalla (media queries) */
 @media (max-width: 600px) {
   header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+@media (max-width: 600px) {
+  .eco-header {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
