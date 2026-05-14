@@ -85,6 +85,7 @@ body {
   align-items: center;
   gap: 12px;
 }
+
 /* Sección y configuración del logo */
 .eco-logo {
   width: 48px;
@@ -97,11 +98,13 @@ body {
   color: white;
   font-weight: 700;
 }
+
 .eco-lang {
   display: flex;
   gap: 8px;
   align-items: center;
 }
+
 .eco-card {
   background: var(--card);
   padding: 1.25rem;
@@ -109,25 +112,30 @@ body {
   margin-top: 1rem;
   box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
 }
+
 h1 {
   margin: 0 0 0.5rem 0;
 }
+
 p.eco-lead {
   color: var(--muted);
   margin: 0;
 }
+
 .eco-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 12px;
   margin-top: 1rem;
 }
+
 .eco-project {
   padding: 1rem;
   border-radius: 8px;
   background: linear-gradient(180deg, #fff, #fbfcff);
   border: 1px solid #eef2ff;
 }
+
 /* [5] Helpers */
 .eco-btn {
   background: var(--accent);
@@ -137,6 +145,7 @@ p.eco-lead {
   text-decoration: none;
   font-weight: 600;
 }
+
 /* Diseño responsive para para ajustar a diferentes tamaños de pantalla (media queries) */
 @media (max-width: 600px) {
   .eco-header {
