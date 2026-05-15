@@ -162,3 +162,33 @@ p.eco-lead {
     gap: 8px;
   }
 }
+
+/* Image container and placeholder for pages */
+.eco-images {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.eco-images .eco-image {
+  flex: 1 1 220px;
+}
+.eco-images img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  box-shadow: 0 1px 2px rgba(16,24,40,0.04);
+}
+.eco-images .placeholder {
+  background: #f0f2f5;
+  border: 1px dashed #d1d5db;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
