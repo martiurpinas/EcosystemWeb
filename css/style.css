@@ -88,22 +88,17 @@ body {
 
 /* Sección y configuración del logo */
 .eco-logo {
-  width: 64px;
-  height: 64px;
-  background: linear-gradient(135deg, var(--accent), #7ad0ff);
-  border-radius: 8px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  font-weight: 700;
+  padding: 6px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--accent), #7ad0ff);
 }
 
-/* Forzar un tamaño ligeramente menor para la imagen del logo en todas las páginas */
-img[alt="Ecosystem logo"] {
-  max-width: 64px !important;
-  width: auto !important;
-  height: auto !important;
+.eco-logo img {
+  max-width: 160px;
+  height: auto;
   display: block;
 }
 
@@ -173,12 +168,21 @@ p.eco-lead {
 .eco-images .eco-image {
   flex: 1 1 220px;
 }
+.eco-images .eco-image img,
 .eco-images img {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
   border-radius: 8px;
   display: block;
   box-shadow: 0 1px 2px rgba(16,24,40,0.04);
+}
+
+@media (max-width: 600px) {
+  .eco-images .eco-image img,
+  .eco-images img {
+    height: auto;
+  }
 }
 .eco-images .placeholder {
   background: #f0f2f5;
