@@ -88,8 +88,8 @@ body {
 
 /* Sección y configuración del logo */
 .eco-logo {
-  width: 48px;
-  height: 48px;
+  width: 64px;
+  height: 64px;
   background: linear-gradient(135deg, var(--accent), #7ad0ff);
   border-radius: 8px;
   display: flex;
@@ -97,6 +97,14 @@ body {
   justify-content: center;
   color: white;
   font-weight: 700;
+}
+
+/* Forzar un tamaño ligeramente menor para la imagen del logo en todas las páginas */
+img[alt="Ecosystem logo"] {
+  max-width: 64px !important;
+  width: auto !important;
+  height: auto !important;
+  display: block;
 }
 
 .eco-lang {
