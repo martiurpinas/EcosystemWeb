@@ -196,3 +196,42 @@ p.eco-lead {
   padding: 0.5rem 1rem;
   text-align: center;
 }
+
+/* Form styles */
+.eco-form label {
+  display: block;
+  margin: 0.5rem 0 0.25rem 0;
+  font-size: 0.95rem;
+}
+.eco-form input[type="text"],
+.eco-form input[type="email"],
+.eco-form textarea {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #e6e9ef;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 1rem;
+  color: #111;
+}
+.eco-form textarea { resize: vertical; }
+.eco-form button[type="submit"] {
+  margin-top: 0.75rem;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.eco-form button[type="submit"]:hover { filter: brightness(0.95); }
+.form-success {
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  background: #ecfdf5;
+  border: 1px solid #bbf7d0;
+  color: #065f46;
+  border-radius: 8px;
+}
+.hp-field { display: none !important; }
