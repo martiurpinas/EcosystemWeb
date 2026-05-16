@@ -27,16 +27,19 @@
       <h1>Contacto</h1>
       <p class="eco-lead">Rellena el siguiente formulario para ponerte en contacto con nosotros.</p>
       <section class="eco-form">
-        <form action="#" method="post">
+        <form class="contact-form" action="#" method="post">
           <label for="name-es">Nombre</label>
-          <input id="name-es" name="name" type="text" required>
+          <input id="name-es" name="name" type="text" required placeholder="Tu nombre completo" aria-required="true">
           <label for="email-es">Correo electrónico</label>
-          <input id="email-es" name="email" type="email" required>
+          <input id="email-es" name="email" type="email" required placeholder="nombre@ejemplo.com" aria-required="true">
           <label for="message-es">Mensaje</label>
-          <textarea id="message-es" name="message" rows="6" required></textarea>
+          <textarea id="message-es" name="message" rows="6" required placeholder="Escribe tu mensaje aquí..." aria-required="true"></textarea>
+          <input id="hp-es" name="hp" type="text" class="hp-field" autocomplete="off" tabindex="-1" aria-hidden="true">
           <button type="submit">Enviar</button>
+          <p class="form-success" role="status" hidden>Gracias — hemos recibido tu mensaje. Te responderemos pronto.</p>
         </form>
       </section>
+      
     </main>
     <footer class="eco-footer">Volver a <a href="../index.html">Inicio</a> · © 2026 Ecosystem</footer>
   </div>
