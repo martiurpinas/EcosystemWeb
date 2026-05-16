@@ -27,19 +27,22 @@
       <h1>Contacte</h1>
       <p class="eco-lead">Omple el següent formulari per contactar amb nosaltres.</p>
       <section class="eco-form">
-        <form action="#" method="post">
+        <form class="contact-form" action="#" method="post">
           <label for="name-ca">Nom</label>
-          <input id="name-ca" name="name" type="text" required>
+          <input id="name-ca" name="name" type="text" required placeholder="El teu nom complet" aria-required="true">
 
           <label for="email-ca">Correu electrònic</label>
-          <input id="email-ca" name="email" type="email" required>
+          <input id="email-ca" name="email" type="email" required placeholder="nom@exemple.com" aria-required="true">
 
           <label for="message-ca">Missatge</label>
-          <textarea id="message-ca" name="message" rows="6" required></textarea>
+          <textarea id="message-ca" name="message" rows="6" required placeholder="Escriu el teu missatge aquí..." aria-required="true"></textarea>
 
+          <input id="hp-ca" name="hp" type="text" class="hp-field" autocomplete="off" tabindex="-1" aria-hidden="true">
           <button type="submit">Enviar</button>
+          <p class="form-success" role="status" hidden>Gràcies — hem rebut el teu missatge. Et respondrem aviat.</p>
         </form>
       </section>
+      
     </main>
     <footer class="eco-footer">Tornar a <a href="../index.html">Pàgina d'inici</a> · © 2026 Ecosystem</footer>
   </div>
