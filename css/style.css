@@ -235,3 +235,29 @@ p.eco-lead {
   border-radius: 8px;
 }
 .hp-field { display: none !important; }
+
+/* [Accessibility/Alignment] Justify texts and present images consistently
+   - Apply justified alignment to paragraph and list text inside main content
+   - Keep forms untouched (do not change `.eco-form` rules)
+   - Make images in main content block-level and centered to appear visually "justified"
+*/
+main p,
+main li,
+.eco-lead,
+.eco-grid .eco-project p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Images inside the main content: make them block-level and centered
+   so they align consistently with justified text. This does not alter
+   form inputs or form layout (no .eco-form rules changed). */
+/* Apply to pages that are NOT language index pages (we'll mark those with `body.is-index`) */
+body:not(.is-index) main img,
+body:not(.is-index) .eco-project img,
+body:not(.is-index) .eco-images img {
+  display: block;
+  margin: 0.6rem auto;
+  max-width: 100%;
+  height: auto;
+}
