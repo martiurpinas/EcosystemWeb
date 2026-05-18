@@ -1,23 +1,4 @@
-/* Shared styles for Ecosystem site */
-/*
-  Ecosystem site CSS — anotado y reordenado
-
-  Objetivo: agrupar reglas y añadir referencias a los HTML
-  Páginas principales (usando este CSS):
-    - index.html
-    - es/index.html, es/proyectos.html, es/sobre.html
-    - ca/index.html, ca/projectes.html, ca/sobre.html
-    - en/index.html, en/proyectos.html, en/sobre.html
-
-  Secciones dentro de este archivo:
-    1) Variables globales
-    2) Reset y tipografía
-    3) Layout (.container, header, nav, footer)
-    4) Componentes (.brand, .logo, .lang-switch, .card, .grid, .project)
-    5) Helpers y responsive
-*/
-
-/* [1] Variables globales (usadas en todas las páginas) */
+/* [1] Variables globales (utilizadas para las páginas en los 3 diferentes idiomas) */
 :root {
   --bg: #f5f7fb;
   --card: #ffffff;
@@ -26,7 +7,7 @@
   --max-width: 1100px;
 }
 
-/* [2] Reset y tipografía (todas las páginas) */
+/* [2] Reset y tipografía (utilizada para las páginas en los 3 diferentes idiomas) */
 * {
   box-sizing: border-box;
 }
@@ -55,8 +36,9 @@ body {
   justify-content: space-between;
 }
 
-.eco-nav {
   /* nav container used in es/, ca/, en/ */
+.eco-nav {
+
 }
 
 .eco-nav ul {
@@ -149,7 +131,7 @@ p.eco-lead {
   font-weight: 600;
 }
 
-/* Diseño responsive para para ajustar a diferentes tamaños de pantalla (media queries) */
+/* Diseño responsive para para ajustar a los diferentes tamaños de pantalla (media queries) */
 @media (max-width: 600px) {
   .eco-header {
     flex-direction: column;
@@ -165,9 +147,11 @@ p.eco-lead {
   flex-wrap: wrap;
   margin-top: 1rem;
 }
+
 .eco-images .eco-image {
   flex: 1 1 220px;
 }
+
 .eco-images .eco-image img,
 .eco-images img {
   width: 100%;
@@ -178,12 +162,14 @@ p.eco-lead {
   box-shadow: 0 1px 2px rgba(16,24,40,0.04);
 }
 
+*/ Diseño responsive paralas imágenes en páginas que no estan en index.html */
 @media (max-width: 600px) {
   .eco-images .eco-image img,
   .eco-images img {
     height: auto;
   }
 }
+
 .eco-images .placeholder {
   background: #f0f2f5;
   border: 1px dashed #d1d5db;
@@ -203,6 +189,7 @@ p.eco-lead {
   margin: 0.5rem 0 0.25rem 0;
   font-size: 0.95rem;
 }
+
 .eco-form input[type="text"],
 .eco-form input[type="email"],
 .eco-form textarea {
@@ -214,6 +201,7 @@ p.eco-lead {
   font-size: 1rem;
   color: #111;
 }
+
 .eco-form textarea { resize: vertical; }
 .eco-form button[type="submit"] {
   margin-top: 0.75rem;
@@ -225,6 +213,7 @@ p.eco-lead {
   cursor: pointer;
   font-weight: 700;
 }
+
 .eco-form button[type="submit"]:hover { filter: brightness(0.95); }
 .form-success {
   margin-top: 0.75rem;
@@ -236,11 +225,7 @@ p.eco-lead {
 }
 .hp-field { display: none !important; }
 
-/* [Accessibility/Alignment] Justify texts and present images consistently
-   - Apply justified alignment to paragraph and list text inside main content
-   - Keep forms untouched (do not change `.eco-form` rules)
-   - Make images in main content block-level and centered to appear visually "justified"
-*/
+/* [Alineación] Justificación del los textos y imagenes */
 main p,
 main li,
 .eco-lead,
@@ -249,10 +234,7 @@ main li,
   text-justify: inter-word;
 }
 
-/* Images inside the main content: make them block-level and centered
-   so they align consistently with justified text. This does not alter
-   form inputs or form layout (no .eco-form rules changed). */
-/* Apply to pages that are NOT language index pages (we'll mark those with `body.is-index`) */
+/* Aplica a las páginas que NO contengan las páginas de índice del idioma correspondiente. */
 body:not(.is-index) main img,
 body:not(.is-index) .eco-project img,
 body:not(.is-index) .eco-images img {
