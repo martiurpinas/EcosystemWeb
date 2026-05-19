@@ -1,4 +1,4 @@
-/* [1] Variables globales (utilizadas para las páginas en los 3 diferentes idiomas) */
+/* [1] Parametros globales (utilizadas para las páginas en los 3 diferentes idiomas Castellano, Catalán, Inglés) */
 :root {
   --bg: #f5f7fb;
   --card: #ffffff;
@@ -19,7 +19,7 @@ body {
   color: #111;
 }
 
-/* [3] Layout */
+/* [3] Contenedores de */
 .eco-container {
   max-width: var(--max-width);
   margin: 2rem auto;
@@ -36,7 +36,7 @@ body {
   justify-content: space-between;
 }
 
-  /* nav container used in es/, ca/, en/ */
+  /* nav container utilizados en castellano, catalan, ingles */
 .eco-nav {
 
 }
@@ -121,7 +121,7 @@ p.eco-lead {
   border: 1px solid #eef2ff;
 }
 
-/* [5] Helpers */
+/* [5] Botones */
 .eco-btn {
   background: var(--accent);
   color: white;
@@ -140,7 +140,7 @@ p.eco-lead {
   }
 }
 
-/* Image container and placeholder for pages */
+/* Containedor y marcador de posición para las paginas */
 .eco-images {
   display: flex;
   gap: 12px;
@@ -225,7 +225,7 @@ p.eco-lead {
 }
 .hp-field { display: none !important; }
 
-/* [Alineación] Justificación del los textos y imagenes */
+/* Justificación [Alineación] del los textos y imagenes */
 main p,
 main li,
 .eco-lead,
