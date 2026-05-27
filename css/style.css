@@ -7,7 +7,7 @@
   --max-width: 1100px;
 }
 
-/* [2] Reset y tipografía (utilizada para las páginas en los 3 diferentes idiomas) */
+/* [2] Reset y tipografía asegura que el margen rompa los diseños y que la fuente sea legible */
 * {
   box-sizing: border-box;
 }
