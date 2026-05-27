@@ -19,7 +19,7 @@ body {
   color: #111;
 }
 
-/* [3] Contenedores de */
+/* [3] Centra el texto del contenido y limita el ancho */
 .eco-container {
   max-width: var(--max-width);
   margin: 2rem auto;
