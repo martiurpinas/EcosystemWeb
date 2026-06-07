@@ -1,4 +1,5 @@
 /* [1] Parametros globales (utilizadas para las páginas en los 3 diferentes idiomas Castellano, Catalán, Inglés) */
+
 :root {
   --bg: #f5f7fb;
   --card: #ffffff;
@@ -13,7 +14,7 @@
 }
 
 body {
-  font-family: Inter, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
   background: var(--bg);
   margin: 0;
   color: #111;
@@ -36,10 +37,6 @@ body {
   justify-content: space-between;
 }
 
-  /* nav container utilizados en castellano, catalan, ingles */
-.eco-nav {
-
-}
 
 .eco-nav ul {
   list-style: none;
@@ -47,6 +44,8 @@ body {
   padding: 0;
   display: flex;
   gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .eco-nav a {
@@ -138,10 +137,58 @@ p.eco-lead {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
+    padding: 0.75rem;
+  }
+
+  .eco-container {
+    margin: 1rem auto;
+    padding: 0.75rem;
+  }
+
+  .eco-logo img {
+    max-width: 56px;
+    height: auto;
+  }
+
+  .eco-nav ul {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .eco-nav a {
+    display: inline-block;
+    padding: 6px 8px;
+  }
+
+  .eco-btn {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  h1 {
+    font-size: clamp(1.4rem, 5vw, 1.9rem);
+    line-height: 1.08;
+  }
+
+  p.eco-lead,
+  main p {
+    font-size: 0.98rem;
+    line-height: 1.5;
   }
 }
 
-/* Containedor y marcador de posición para las paginas */
+@media (max-width: 420px) {
+  .eco-header { padding: 0.5rem; }
+  .eco-logo img { max-width: 48px; }
+  .eco-nav ul { gap: 8px; }
+  h1 { font-size: 1.3rem; }
+  .eco-container { padding: 0.5rem; }
+  .eco-card { padding: 0.85rem; }
+  .eco-btn { width: 100%; text-align: center; }
+  .eco-grid { gap: 10px; }
+}
+
+/* Contenedor y marcador de posición para las paginas */
 .eco-images {
   display: flex;
   gap: 12px;
@@ -163,7 +210,7 @@ p.eco-lead {
   box-shadow: 0 1px 2px rgba(16,24,40,0.04);
 }
 
-*/ Diseño responsive paralas imágenes en páginas que no estan en index.html */
+/* Diseño responsive para las imágenes en páginas que no están en index.html */
 @media (max-width: 600px) {
   .eco-images .eco-image img,
   .eco-images img {
