@@ -273,7 +273,7 @@ p.eco-lead {
 }
 .hp-field { display: none !important; }
 
-/* Justificación [Alineación] del los textos y imagenes */
+/* Justificación (alineación) del los textos y imagenes */
 main p,
 main li,
 .eco-lead,
@@ -282,7 +282,7 @@ main li,
   text-justify: inter-word;
 }
 
-/* Aplica a las páginas que NO contengan las páginas de índice del idioma correspondiente. */
+/* Sección para las páginas que NO contengan las páginas de índice del idioma correspondiente */
 body:not(.is-index) main img,
 body:not(.is-index) .eco-project img,
 body:not(.is-index) .eco-images img {
